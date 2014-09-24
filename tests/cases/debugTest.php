@@ -1,6 +1,6 @@
 <?php
 /**
- * pdo adaptor
+ * Debug class test
  *
  */
 require_once __DIR__ . '/../header.php';
@@ -19,6 +19,20 @@ class TestDebug extends PHPUnit_Framework_TestCase
         Debug::dump(new \Exception('hello world'));
         parent::assertContains('Exception', ob_get_clean());
 
+    }
+
+
+    public function testDebugger()
+    {
+        Debug::bench('slowThing', array(), $this);
+        Debug::setUserData('foo', 'bar');
+        Debug::output();
+    }
+
+
+    public function slowThing()
+    {
+        sleep(1);
     }
 
 

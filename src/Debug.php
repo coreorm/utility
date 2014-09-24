@@ -332,9 +332,7 @@ class Debug
                 }
                 $row['PARAMS'] = $tmp;
             }
-            if (!empty($row['PARAMS'])) {
-                $row['PARAMS'] = var_export($row['PARAMS'], 1);
-            }
+            $row['PARAMS'] = var_export($row['PARAMS'], 1);
             $tbl->addRow($row);
             $cnt ++;
         }
