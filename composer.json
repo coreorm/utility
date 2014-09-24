@@ -1,0 +1,25 @@
+{
+    "name": "coreorm/utility",
+    "description": "CoreORM Utilities and tool chain",
+    "keywords": ["framework", "CoreCRM", "Utility"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bruce B Li",
+            "email": "toughgamer@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "classpreloader/classpreloader": "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CoreORM\\Utility\\": "src"
+        }
+    },
+    "minimum-stability": "dev"
+}
